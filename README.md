@@ -7,6 +7,8 @@ Estos slackbuilds estan actualizados de los que están en el repo ponce.
 
 Se modificaron para que descarguen las fuentes y realicen la compilación y el paquete, pero no los instala o actualiza.
 
+El directorio de trabajo es /tmp/SBo.
+
 <b>Estos paquetes quedan en /tmp.</b>
 
 
