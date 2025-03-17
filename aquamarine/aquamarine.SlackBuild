@@ -22,7 +22,7 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-# 291224 - BUILD 3 por actualizacion hyprwaylabd-scanner.
+# 170325 - BUILD 2 por actualizacion hyprutils-0.1.12.
 
 
 
@@ -30,7 +30,7 @@ cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=aquamarine
 VERSION=${VERSION:-0.8.0}	
-BUILD=${BUILD:-1}
+BUILD=${BUILD:-2}
 TAG=${TAG:-_SBo}		
 PKGTYPE=${PKGTYPE:-tgz}
 
