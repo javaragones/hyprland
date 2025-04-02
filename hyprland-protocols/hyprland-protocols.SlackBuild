@@ -25,9 +25,9 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=hyprland-protocols
-VERSION=${VERSION:-0.6.2}	
+VERSION=${VERSION:-0.6.3}
 BUILD=${BUILD:-1}
-TAG=${TAG:-_SBo}		
+TAG=${TAG:-_SBo}
 PKGTYPE=${PKGTYPE:-tgz}
 
 if [ -z "$ARCH" ]; then
@@ -46,9 +46,9 @@ fi
 
 wget -c https://github.com/hyprwm/hyprland-protocols/archive/refs/tags/v$VERSION.tar.gz
 
-TMP=${TMP:-/tmp/SBo}	
+TMP=${TMP:-/tmp/SBo}
 PKG=$TMP/package-$PRGNAM
-OUTPUT=${OUTPUT:-/tmp}	
+OUTPUT=${OUTPUT:-/tmp}
 
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -64,7 +64,7 @@ else
   LIBDIRSUFFIX=""
 fi
 
-set -e 
+set -e
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
