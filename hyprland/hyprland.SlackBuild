@@ -22,7 +22,7 @@
 #  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 #  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
-#  Version -3_SBo - Po actualización quamarine hyprutils
+#  060425 - Build 2 - Por actualización aquamarine hyprutils
 #
 #
 
@@ -30,16 +30,16 @@ cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=hyprland
 BINNAM=hyprland-source
-VERSION=${VERSION:-0.48.1}	
-BUILD=${BUILD:-1}
-TAG=${TAG:-_SBo}		
+VERSION=${VERSION:-0.48.1}
+BUILD=${BUILD:-2}
+TAG=${TAG:-_SBo}
 PKGTYPE=${PKGTYPE:-tgz}
 
 if [ -z "$ARCH" ]; then
   case "$( uname -m )" in
     i?86) ARCH=i586 ;;
     arm*) ARCH=arm ;;
-   
+
        *) ARCH=$( uname -m ) ;;
   esac
 fi
@@ -51,9 +51,9 @@ fi
 
 wget -c https://github.com/hyprwm/Hyprland/releases/download/v$VERSION/source-v$VERSION.tar.gz
 
-TMP=${TMP:-/tmp/SBo}	
+TMP=${TMP:-/tmp/SBo}
 PKG=$TMP/package-$PRGNAM
-OUTPUT=${OUTPUT:-/tmp}	
+OUTPUT=${OUTPUT:-/tmp}
 
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
