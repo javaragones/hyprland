@@ -25,9 +25,9 @@
 cd $(dirname $0) ; CWD=$(pwd)
 
 PRGNAM=hyprpaper
-VERSION=${VERSION:-0.7.4}	
-BUILD=${BUILD:-2}
-TAG=${TAG:-_SBo}		
+VERSION=${VERSION:-0.7.4}
+BUILD=${BUILD:-3}
+TAG=${TAG:-_SBo}
 PKGTYPE=${PKGTYPE:-tgz}
 
 if [ -z "$ARCH" ]; then
@@ -44,11 +44,11 @@ if [ ! -z "${PRINT_PACKAGE_NAME}" ]; then
   exit 0
 fi
 
-# wget -c https://github.com/hyprwm/hyprpaper/archive/refs/tags/v$VERSION.tar.gz
+wget -c https://github.com/hyprwm/hyprpaper/archive/refs/tags/v$VERSION.tar.gz
 
-TMP=${TMP:-/tmp/SBo}	
+TMP=${TMP:-/tmp/SBo}
 PKG=$TMP/package-$PRGNAM
-OUTPUT=${OUTPUT:-/tmp}	
+OUTPUT=${OUTPUT:-/tmp}
 
 if [ "$ARCH" = "i586" ]; then
   SLKCFLAGS="-O2 -march=i586 -mtune=i686"
@@ -64,17 +64,17 @@ else
   LIBDIRSUFFIX=""
 fi
 
-set -e 
+set -e
 
 rm -rf $PKG
 mkdir -p $TMP $PKG $OUTPUT
 cd $TMP
 rm -rf $PRGNAM
 #mkdir -p $PRGNAM
-git clone https://github.com/hyprwm/hyprpaper.git
-#tar xvf $CWD/v$VERSION.tar.gz
-cd $PRGNAM
-#cd $PRGNAM-$VERSION
+#git clone https://github.com/hyprwm/hyprpaper.git
+tar xvf $CWD/v$VERSION.tar.gz
+#cd $PRGNAM
+cd $PRGNAM-$VERSION
 chown -R root:root .
 find -L . \
  \( -perm 777 -o -perm 775 -o -perm 750 -o -perm 711 -o -perm 555 \
